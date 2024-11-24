@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase Order</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Purchase Order System</h1>
+      <nav>
+        <a href="php/print_po.php" class="btn">View Orders</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <form id="purchaseOrderForm">
+        <div class="form-group">
+          <label for="order_date">Order Date:</label>
+          <input type="date" id="order_date" name="order_date" required />
+        </div>
+        <div class="form-group">
+          <label for="supplier_name">Supplier Name:</label>
+          <input
+            type="text"
+            id="supplier_name"
+            name="supplier_name"
+            placeholder="Enter Supplier Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="product_name">Product Name:</label>
+          <input
+            type="text"
+            id="product_name"
+            name="product_name"
+            placeholder="Enter Product Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            placeholder="Enter Quantity"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="total_price">Total Price:</label>
+          <input
+            type="number"
+            id="total_price"
+            name="total_price"
+            placeholder="Enter Total Price"
+            step="0.01"
+            required
+          />
+        </div>
+        <button type="submit" class="btn-submit">Create Order</button>
+      </form>
+      <div id="notification" class="notification hidden">
+        Purchase Order created successfully!
+      </div>
+    </main>
+  </body>
+</html>
